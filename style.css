@@ -1,0 +1,117 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%); /* Soft blue to purple gradient */
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: #333; /* Dark gray for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #4b5e77; /* Muted blue-gray */
+    text-align: center;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.2); /* Frosted glass effect */
+    backdrop-filter: blur(10px); /* Glass blur */
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+#textbox {
+    width: 70%;
+    text-align: center;
+    font-size: 1.5em;
+    border: 2px solid rgba(123, 146, 173, 0.5); /* Muted blue border */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.5); /* Light transparent background */
+    color: #4b5e77; /* Muted blue-gray text */
+    padding: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#textbox:focus {
+    border-color: #7b92ad; /* Slightly darker blue on focus */
+    box-shadow: 0 0 12px rgba(123, 146, 173, 0.3);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #4b5e77; /* Muted blue-gray */
+    letter-spacing: 0.5px;
+}
+
+button {
+    margin-top: 15px;
+    background: #7b92ad; /* Muted blue */
+    font-size: 1.5em;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: #5a7391; /* Darker blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(90, 115, 145, 0.3);
+}
+
+#result {
+    font-size: 1.75em;
+    font-weight: 500;
+    color: #4b5e77; /* Muted blue-gray */
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Subtle background animation for depth */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), transparent 50%),
+                radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.2), transparent 50%);
+    animation: bgShift 15s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes bgShift {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+}
